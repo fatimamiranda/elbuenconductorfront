@@ -11,7 +11,6 @@ export class ProfileService {
   //declaramos la url
   URL = 'http://10.250.5.4:8080/api/clientes/';
   //inyectamos el httpclient
-  
   constructor(private http: HttpClient) { }
 
 

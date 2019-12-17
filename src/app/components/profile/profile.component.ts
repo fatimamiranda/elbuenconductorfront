@@ -18,9 +18,9 @@ export class ProfileComponent implements OnInit {
     this.cliente=new Cliente(); //esto no sé si hace falta
 
     //Ahora necesitamos obtener un cliente pero necesita un dni ¿cómo le eviamos el dni? (sin que sea hardcodeado)
-    /*this.cliente = this.clienteService.getCliente().subscribe(data => {
+   this.clienteService.getCliente(this.cliente.dni).subscribe(data => {
       console.log(data)
-    })*/
+    })
   }
 
 }

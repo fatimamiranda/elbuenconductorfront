@@ -1,17 +1,15 @@
-import { zip } from 'rxjs';
-
 export class Cliente{ //esto no sé si se tiene que volver a poner en el front, creo que sí
-
-    private dni:string;
+ //quito los private para poder acceder, luego vemos si hacemos getters y setters o no
+     dni:string;
    
-    private nombre: string;
+     nombre: string;
     
-    private apellido1:string;
-    private apellido2:string;
-    private zipCode:string;
-    private fechaNacimiento:Date;
-    private fechaCarnet:Date;
-    private calidadConduccion:number;
+     apellido1:string;
+     apellido2:string;
+     zipCode:string;
+     fechaNacimiento:Date;
+     fechaCarnet:Date;
+     calidadConduccion:number;
 
     //Qué diferencia hay entre poner este constructor con el de más abajo? digo a nivel de escribirlo
     public Cliente(){ }
@@ -28,4 +26,5 @@ constructor(dni?:string, nombre?:string, apellido1?:string, apellido2?:string, z
    }
 
    //Hay que añadir getters y setters?
+
 }
