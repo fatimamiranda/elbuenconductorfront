@@ -1,7 +1,10 @@
 @import '~primeicons/primeicons.css';
 @import '~primeng/resources/themes/nova-light/theme.css';
 @import '~primeng/resources/primeng.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body {
+    margin: auto; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    width: 2000px;
 }

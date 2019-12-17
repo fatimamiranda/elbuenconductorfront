@@ -1,0 +1,28 @@
+.menuMovil{
+    display: none;
+}
+
+.container{
+    width: 100%;
+}
+
+
+
+/* 
+.menu{
+    background-color: #D2E6D6;
+    color: black;
+    width: 100%;
+    border: 1px solid black;
+    height: 100px;
+}
+
+.menu button{
+    padding: 15px;
+    width: 12%;
+    font-size: 0.9rem;
+}
+
+.menu:last-child{
+    color: black;
+} */

@@ -1,18 +1,48 @@
-
-
-<div *ngIf="usserLogged">
-    <h1> Perfil </h1>
-    <div class="imagen">
-         <img src="../../../assets/usuario.png" alt="">
-    </div>
-    
-    <p> <b> Nombre  </b> {{cliente.nombre}} </p>
-    <p> <b> DNI  </b> {{cliente.dni}} </p>
-    <p> <b> Primer apellido  </b> {{cliente.apellido1}} </p>
-    <p> <b> Segundo apellido  </b> {{cliente.apellido2}} </p>
-    <p> <b> Código Postal  </b> {{cliente.zipCode}} </p>
-    <p> <b> Fecha de nacimiento  </b> {{cliente.fechaNacimiento}} </p>
-    <p> <b> Fecha de carnet  </b> {{cliente.fechaCarnet}} </p>
-    <p> <b> Calidad de conducción  </b> {{cliente.calidadConduccion}} </p> <!-- Aquí podriamos añadir un range de prime-->
+<div class="container">
+     <header>
+          <div class="bienvenida">
+               <div class="logo">
+                    <img src="../../../assets/Generali_logo_Horizontal_white.svg" alt="">
+               </div>
+               <p> Estás consultando tu seguro de coche por trayecto </p>
+               <div class="welcome">
+                    <p> Bienvenid@,  {{cliente.nombre}}</p>
+                    <button> Cerrar sesión </button>
+               </div>
+          </div>
+         
+          
+     </header>
+     <div class="panel">
+          <div class="expansion">
+               <mat-menu #appMenu2="matMenu" >
+                    <button   mat-menu-item   routerLink="home">Home </button>
+                    
+                    <button   mat-menu-item   routerLink="perfil" *ngIf="usserLogged">Perfil</button>
+                    <button   mat-menu-item   routerLink="trayectos" *ngIf="usserLogged" >Trayectos</button>
+                    <button  mat-menu-item   routerLink="vehiculos"> Vehículos </button>
+                
+                    <button  mat-menu-item   routerLink="registre"> Registrate </button>
+                    <button  mat-menu-item   routerLink="login">Login</button>
+                  </mat-menu>
+                
+                    <button mat-icon-button [matMenuTriggerFor]="appMenu2"> MENU </button>
+          </div>
+             <div class="datosPersonales" >
+                        
+               <h3> Datos Personales: </h3>
+                    <p> <b> Nombre  </b> {{cliente.nombre}} </p>
+                    <p> <b> DNI  </b> {{cliente.dni}} </p> <!--Posible mejora: NIF/NIE-->
+                    <p> <b> Primer apellido  </b> {{cliente.apellido1}} </p>
+                    <p> <b> Segundo apellido  </b> {{cliente.apellido2}} </p>
+                    <p> <b> Código Postal  </b> {{cliente.zipCode}} </p>
+                    <p> <b> Fecha de nacimiento  </b> {{cliente.fechaNacimiento}} </p>
+                    <p> <b> Fecha de carnet  </b> {{cliente.fechaCarnet}} </p>
+                    <p> <b> Calidad de conducción  </b> {{cliente.calidadConduccion}} </p> <!-- Aquí podriamos añadir un range de prime-->
+               <!-- sexo?-->
+          
+               
+               </div>
+     </div>
     
 </div>

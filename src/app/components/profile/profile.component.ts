@@ -15,15 +15,13 @@ export class ProfileComponent implements OnInit {
 
   constructor(private router:Router, private clienteService:ProfileService) { }
 
-  items: MenuItem[];
-
   ngOnInit() {
     
-    this.cliente=new Cliente('12345678A'); //esto no sé si hace falta
-
+    
     //Ahora necesitamos obtener un cliente pero necesita un dni ¿cómo le eviamos el dni? (sin que sea hardcodeado)
-    this.clienteService.getCliente(this.cliente.dni).subscribe(data => {
+    this.clienteService.getCliente('12345678A').subscribe(data => {
       console.log(data)
+         this.cliente = data
     })
   }
 

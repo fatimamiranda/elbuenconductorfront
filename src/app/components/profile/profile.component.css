@@ -1,3 +1,35 @@
+.container{
+    margin: 0;
+    width: 100%;
+}
+
+header{
+    height: 10%;
+    width: 100%;
+    background-color: #C5281C;
+    color: white;
+    padding: 10px;
+   
+}
+
+.bienvenida{
+    display: flex;
+}
+
+.bienvenida p{
+    text-align: center;
+}
+
+
+.logo img{
+    width:100%;
+    vertical-align: top;
+}
+
+.welcome{
+    text-align: right;
+}
+
 .imagen{
     width: 20%;
 }
@@ -5,4 +37,12 @@
 .imagen img{
     vertical-align: top;
     width: 100%;
+}
+
+.panel{
+    display: flex;
+}
+
+.expansion{
+    width: 20%;
 }

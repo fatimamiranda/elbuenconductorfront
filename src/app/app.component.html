@@ -1,16 +1,48 @@
+<div class="container">
+  <div class="menu">
+  
+    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="home">Home </button>
+    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="perfil">Perfil</button>
+    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="trayectos">Trayectos</button>
+    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="vehiculos">Vehiculos</button>
+     
+</div>
+ 
+<!-- <nav> 
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item routerLink="home">Home</button>
+    <button mat-menu-item  routerLink="perfil" >Perfil</button>
+    <button mat-menu-item routerLink="trayectos">Trayectos</button>
+    <button mat-menu-item  routerLink="vehiculos" >Vehiculos</button>
+    <button mat-menu-item routerLink="registre" >Registrate</button>
+    <button mat-menu-item routerLink="login" >Login </button>
+  </mat-menu>
+
+  <button mat-flat-button [matMenuTriggerFor]="appMenu" >Menu</button>
+
+</nav> -->
 
 
-<nav > <!--TODO cambiar el CSS para ponerlo bonito-->
-  <ul>
-    <li> <a   routerLink="perfil"> Perfil </a> </li> <br>
-    <li> <a routerLink="vehiculos"> Vehiculos </a></li> <br>
-    <li> <a routerLink="trayectos"> Trayecto </a></li> <br>
-        
-  </ul>
+<nav class="menuMovil">
+
+  <mat-menu #appMenu2="matMenu" >
+    <button   mat-menu-item   routerLink="home">Home </button>
+    
+    <button   mat-menu-item   routerLink="perfil" *ngIf="usserLogged">Perfil</button>
+    <button   mat-menu-item   routerLink="trayectos" *ngIf="usserLogged" >Trayectos</button>
+    <button  mat-menu-item   routerLink="vehiculos"> Vehículos </button>
+
+    <button  mat-menu-item   routerLink="registre"> Registrate </button>
+    <button  mat-menu-item   routerLink="login">Login</button>
+  </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="appMenu2"> MENU </button>
+
+
+
 </nav>
 
-<!-- TODO añadir una parte de login -->
 
 
-
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> 
+</div>

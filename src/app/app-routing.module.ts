@@ -3,15 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { RegistreComponent } from './components/registre/registre.component';
+import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
+import { TrayectosComponent } from './components/trayectos/trayectos.component';
 
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent,  pathMatch: 'full'},
   {path: 'login', component: LoginComponent,  pathMatch: 'full'},
+  {path: 'registre', component: RegistreComponent,  pathMatch: 'full'},
   {path:"perfil", component:ProfileComponent},
-  {path:"vehiculos", component:ProfileComponent}, //TODO cambiar el componente cuando se cree
-  {path:"trayectos", component:ProfileComponent}, //TODO cambiar el componente cuando se cree
+  {path:"vehiculos", component:VehiculosComponent}, 
+  {path:"trayectos", component:TrayectosComponent}, 
   {path: '**', redirectTo: 'home'}
 ];
 

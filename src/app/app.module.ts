@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { PrimengModule } from './primeng/primeng.module';
+import { MaterialModule } from './material/material.module';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -14,6 +15,11 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileService } from './services/profile.service';
 import { LoginService } from './services/login.service';
 import { HomeComponent } from './components/home/home.component';
+import { RegistreComponent } from './components/registre/registre.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserService } from './services/user.service';
+import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
+import { TrayectosComponent } from './components/trayectos/trayectos.component';
 
 
 @NgModule({
@@ -21,16 +27,21 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ProfileComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegistreComponent,
+    VehiculosComponent,
+    TrayectosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     PrimengModule,
-    HttpClientModule //No sé dónde se tiene que añadir el modulo de prime
+    MaterialModule,
+    HttpClientModule,
+    BrowserAnimationsModule 
   ],
-  providers: [ProfileService, LoginService],
+  providers: [ProfileService, LoginService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
