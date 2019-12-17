@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/model/Cliente';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/services/profile.service';
+import { MenuItem } from 'primeng/api/primeng-api';
 
 @Component({
   selector: 'app-profile',
@@ -14,13 +15,18 @@ export class ProfileComponent implements OnInit {
 
   constructor(private router:Router, private clienteService:ProfileService) { }
 
+  items: MenuItem[];
+
   ngOnInit() {
-    this.cliente=new Cliente(); //esto no sé si hace falta
+    
+    this.cliente=new Cliente('12345678A'); //esto no sé si hace falta
 
     //Ahora necesitamos obtener un cliente pero necesita un dni ¿cómo le eviamos el dni? (sin que sea hardcodeado)
-   this.clienteService.getCliente(this.cliente.dni).subscribe(data => {
+    this.clienteService.getCliente(this.cliente.dni).subscribe(data => {
       console.log(data)
     })
   }
+
+ 
 
 }

@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 export class ProfileService {
 
   //declaramos la url
-  URL = 'http://10.250.5.4:8080/api/clientes/';
+ // URL = 'http://10.250.5.4:8080/api/clientes/';
+  URL = 'http://localhost:8080/api/clientes/';
   //inyectamos el httpclient
   constructor(private http: HttpClient) { }
 
