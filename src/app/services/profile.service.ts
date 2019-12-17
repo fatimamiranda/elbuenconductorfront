@@ -15,10 +15,11 @@ export class ProfileService {
   constructor(private http: HttpClient) { }
 
 
-  getCliente(codigo:number):Observable<Cliente>{
-
-    return this.http.get<Cliente>(this.URL + codigo);
+  getCliente(dni:string):Observable<Cliente>{
+    return this.http.get<Cliente>(this.URL + dni);
   }
 
-  
+  //TODO Endpoint que te devuelve la lista de trayectos
+
+
 }
