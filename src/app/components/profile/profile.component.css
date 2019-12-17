@@ -1,0 +1,8 @@
+.imagen{
+    width: 20%;
+}
+
+.imagen img{
+    vertical-align: top;
+    width: 100%;
+}
