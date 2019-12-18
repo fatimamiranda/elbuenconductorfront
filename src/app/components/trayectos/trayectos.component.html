@@ -6,7 +6,38 @@
 
 <p-button (click)='getTrayectosOut(inicio,fin)' styleClass="ui-button-danger" label="Confirmar" ></p-button>
 
-<!--DATE PICKER  https://material.angular.io/components/datepicker/overview
-
-LISTA / TABLA donde se muestren los trayectos -> por defectos que salgan todos -->
+<div class='ui-g-12 ui-md-12 ui-lg-10'>
+    <p-table class=" table" *ngIf="trayectos"  [value]="trayectos">
+    <ng-template pTemplate="header">
+    <tr>
+        <th> Matrícula </th>
+        <th> Km Recorridos </th>
+        <th> Número Acelerones </th>
+        <th> Número Frenazos </th>
+        <th> RPM Medias </th>
+        <th> Fecha Inicio </th>
+        <th> Hora Inicio </th>
+        <th> Fecha Fin </th>
+        <th> Hora Fin </th>
+        <th> Precio </th>
+      
+    </tr>
+     </ng-template>
+     <ng-template pTemplate="body" let-trayecto>
+    <tr>
+        <!--TODO matrícula en courier-->
+        <td > {{trayecto.matricula}} </td>
+        <td style="text-align: right;"> {{trayecto.kmRecorridos | number: "0.1-1"}} </td>
+        <td style="text-align: right;">  {{trayecto.nAcelerones}} </td>
+        <td style="text-align: right;">  {{trayecto.nFrenazos}} </td>
+        <td style="text-align: right;">  {{trayecto.rpmMedias}} </td>
+        <td>  {{trayecto.inicio | date: "dd/MM/yyyy"}} </td>
+        <td>  {{trayecto.inicio | date: "hh:mm"}} </td>
+        <td>  {{trayecto.fin | date: "dd/MM/yyyy"}} </td>
+        <td>  {{trayecto.fin | date: "hh:mm"}} </td>
+        <td style="text-align: right;">  {{trayecto.precio | number: "0.2-2"}} €</td>
+    </tr>
+     </ng-template>
+</p-table>
+</div>
 
