@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { RegistreComponent } from './components/registre/registre.component';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { TrayectosComponent } from './components/trayectos/trayectos.component';
+import { DatospersonalesComponent } from './components/datospersonales/datospersonales.component';
 
 
 const routes: Routes = [
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent,  pathMatch: 'full'},
   {path:"perfil", component:ProfileComponent},
   {path:"vehiculos", component:VehiculosComponent}, 
-  {path:"trayectos", component:TrayectosComponent}, 
+  {path:"trayectos", component:TrayectosComponent},
+  {path:"datospersonales", component:DatospersonalesComponent}, 
   {path: '**', redirectTo: 'login'}
 ];
 

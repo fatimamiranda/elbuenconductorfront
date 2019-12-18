@@ -4,24 +4,11 @@
 }
 
 header{
-    height: 10%;
     width: 100%;
-    background-color: #C5281C;
     color: white;
+    background-color: #C5281C;
     padding: 10px;
    
-}
-
-.bienvenida{
-    display: flex;
-}
-
-.bienvenida p{
-    text-align: center;
-}
-
-.welcome{
-    left: 0;
 }
 
 .imagen{
@@ -29,20 +16,25 @@ header{
 }
 
 .imagen img{
-  
-    width: 100%;
+   width: 100%;
 }
 
 .panel{
     display: flex;
+    margin-top: 10px;
 }
 
 .expansion{
     width: 20%;
+    margin-left:60px;
 }
 
-.datosPersonales{
-    border: 1px solid grey;
-    padding: 2px;
-    
+.expansion button {
+    width: 60%;
+    background-color: #C5281C;
+    color: white;
+    margin: 10px;
 }
+
+
+/*Responsive*/

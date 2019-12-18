@@ -15,7 +15,7 @@ export class ProfileService {
   constructor(private http: HttpClient) { }
 
 
-  getCliente(dni:string):Observable<Cliente>{
+  getCliente(dni:String):Observable<Cliente>{
     return this.http.get<Cliente>(this.URL + dni);
   }
 

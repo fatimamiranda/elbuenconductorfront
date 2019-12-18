@@ -1,35 +1,22 @@
 <div class="container">
      <header>
-          <div class="bienvenida">
-               
-               <p> Estás consultando tu seguro de coche por trayecto </p>
-               <div class="welcome">
-                    <p> Bienvenid@,  {{cliente.nombre}}</p>
-                    <button> Cerrar sesión </button>
-               </div>
-          </div>
-         
-          
+          <p> Estás consultando tu seguro de coche por trayecto </p>
      </header>
+     <app-breadcrumb> </app-breadcrumb>
      <div class="panel">
           <div class="expansion">
-           <!--<app-panelexpansion> </app-panelexpansion>-->  
+           
+           <button class="expansionButton"mat-button  routerLink="datospersonales">Mis datos personales </button> <br>
+           <button class="expansionButton" mat-button  routerLink="facturas">Mis facturas</button> <br>
+           <button class="expansionButton" mat-button  routerLink="datosbanco">Mis Datos Bancarios</button> <br>
+           
           </div>
-             <div class="datosPersonales" >
-                        
-               <h3> Datos Personales: </h3>
-                    <p> <b> Nombre  </b> {{cliente.nombre}} </p>
-                    <p> <b> DNI  </b> {{cliente.dni}} </p> <!--Posible mejora: NIF/NIE-->
-                    <p> <b> Primer apellido  </b> {{cliente.apellido1}} </p>
-                    <p> <b> Segundo apellido  </b> {{cliente.apellido2}} </p>
-                    <p> <b> Código Postal  </b> {{cliente.zipCode}} </p>
-                    <p> <b> Fecha de nacimiento  </b> {{cliente.fechaNacimiento}} </p>
-                    <p> <b> Fecha de carnet  </b> {{cliente.fechaCarnet}} </p>
-                    <p> <b> Calidad de conducción  </b> {{cliente.calidadConduccion}} </p> <!-- Aquí podriamos añadir un range de prime-->
-               <!-- sexo?-->
-          
-               
-               </div>
+          <div class="bienvenida">
+               <h2> HOLA, {{cliente.nombre}}</h2>
+               <h3> Bienvenid@ a tu seguro por trayecto </h3>
+               <button class="newinsurance" mat-stroked-button> NUEVO SEGURO </button>
+          </div>
+
      </div>
     
 </div>

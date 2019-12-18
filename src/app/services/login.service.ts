@@ -15,7 +15,6 @@ export class LoginService {
   logIn(inputDni:String):boolean{
 
     let isLogged:boolean = false;
-    console.log(inputDni);
 
     if (this.DNIs.includes(inputDni)){
       
@@ -23,19 +22,7 @@ export class LoginService {
       isLogged = true;
     }
 
-    console.log(isLogged);
     return isLogged;
   }
-
-  
-
-  /*
-  login(username:string, password:string) {
-    return this.http.post('https://reqres.in/api/login', {
-      email: username,
-      password: password,     
-    });     
-  }
-  */
 
 }

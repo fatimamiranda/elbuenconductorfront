@@ -17,10 +17,11 @@ import { LoginService } from './services/login.service';
 import { HomeComponent } from './components/home/home.component';
 import { RegistreComponent } from './components/registre/registre.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserService } from './services/user.service';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { TrayectosComponent } from './components/trayectos/trayectos.component';
 import { PanelexpansionComponent } from './components/panelexpansion/panelexpansion.component';
+import { DatospersonalesComponent } from './components/datospersonales/datospersonales.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import { PanelexpansionComponent } from './components/panelexpansion/panelexpans
     RegistreComponent,
     VehiculosComponent,
     TrayectosComponent,
-    PanelexpansionComponent
+    PanelexpansionComponent,
+    DatospersonalesComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { PanelexpansionComponent } from './components/panelexpansion/panelexpans
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [ProfileService, LoginService, UserService],
+  providers: [ProfileService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

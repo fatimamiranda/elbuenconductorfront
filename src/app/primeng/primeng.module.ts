@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import {MenuModule} from 'primeng/menu';
 import {MenuItem} from 'primeng/api';
 import {ContextMenuModule} from 'primeng/contextmenu';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
 ;
 
 @NgModule({
@@ -11,12 +12,14 @@ import {ContextMenuModule} from 'primeng/contextmenu';
   imports: [
     CommonModule,
     ContextMenuModule,
-    MenuModule
+    MenuModule,
+    BreadcrumbModule
     
   ],
   exports:[ 
     ContextMenuModule,
-    MenuModule
+    MenuModule,
+    BreadcrumbModule
   ]
 })
 export class PrimengModule { }
