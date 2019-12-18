@@ -1,4 +1,12 @@
-<p>trayectos works!</p>
+<h2>Trayectos entre rango de fechas</h2>
 
+<p-calendar [(ngModel)]="inicio" placeholder="Fecha inicio"></p-calendar>
 
-<!-- TODO mostrar los trayectos que ha realizado el usuario -->
+<p-calendar [(ngModel)]="fin" placeholder="Fecha fin"></p-calendar>
+
+<p-button (click)='getTrayectosOut(inicio,fin)' styleClass="ui-button-danger" label="Confirmar" ></p-button>
+
+<!--DATE PICKER  https://material.angular.io/components/datepicker/overview
+
+LISTA / TABLA donde se muestren los trayectos -> por defectos que salgan todos -->
+

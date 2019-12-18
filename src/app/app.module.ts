@@ -21,6 +21,8 @@ import { TrayectosComponent } from './components/trayectos/trayectos.component';
 import { PanelexpansionComponent } from './components/panelexpansion/panelexpansion.component';
 import { DatospersonalesComponent } from './components/datospersonales/datospersonales.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { TrayectosService } from './services/trayectos.service';
+import { VehiculoService } from './services/vehiculo.service';
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [ProfileService, LoginService],
+  providers: [ProfileService, LoginService, TrayectosService, VehiculoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

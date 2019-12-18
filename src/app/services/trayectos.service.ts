@@ -1,25 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Cliente } from '../model/Cliente';
+import { Trayecto } from '../model/Trayecto';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProfileService {
+export class TrayectosService {
 
   //declaramos la url
- // URL = 'http://10.250.5.4:8080/api/clientes/';
   URL = 'https://elbuenconductor.herokuapp.com/api/clientes/';
+
+
   //inyectamos el httpclient
   constructor(private http: HttpClient) { }
 
-
-  getCliente(dni:String):Observable<Cliente>{
-    return this.http.get<Cliente>(this.URL + dni);
+  getTrayectos(dni:String, inicio:string, fin:string):Observable<Trayecto[]>{
+    //dni:String, inicio:string, fin:string
+    console.log('hola')
+    return this.http.get<Trayecto[]>(this.URL + dni + '/' + inicio + '/' + fin);
+  
   }
-
-  //TODO Endpoint que te devuelve la lista de trayectos
-
-
 }

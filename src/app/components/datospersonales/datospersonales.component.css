@@ -2,5 +2,34 @@
 .datosPersonales{
     padding: 12px;
     width: 40%;
+    background-color: rgb(216, 204, 204);
+    color: black;
     
+}
+
+.datosPersonales h3{
+    font-weight: normal;
+    font-size: 1.2em;
+}
+ 
+.datosPersonales p{
+    font-size: 0.9em;
+}
+
+
+.panel{
+    display: flex;
+    margin-top: 10px;
+}
+
+.expansion{
+    width: 20%;
+    margin-left:60px;
+}
+
+.expansion button {
+    width: 70%;
+    background-color: #C5281C;
+    color: white;
+    margin: 10px;
 }

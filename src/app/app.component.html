@@ -1,21 +1,20 @@
 <div class="container">
   <div class="menu">
   
-    <button mat-button>
+    <button mat-button class="buttnlogo">
       <div class="logo">
-        <img src="../../../assets/Generali_logo_Horizontal_white.svg" alt="">
+        <img src="../../../assets/Generali_logo_Horizontal_white.svg" alt="" routerLink="home">
       </div>
     </button>
 
-    <div *ngIf=loginService.userDni>
-      <button mat-button routerLink="home">HOME</button>
+      <button mat-button routerLink="home" class="buttonsin">HOME</button>
       
-      <button mat-button routerLink="perfil">PERFIL</button>
+      <button mat-button routerLink="perfil" class="buttonsin" *ngIf=loginService.userDni >PERFIL</button>
       
-      <button mat-button routerLink="trayectos">TRAYECTOS</button>
+      <button mat-button routerLink="trayectos" class="buttonsin" *ngIf=loginService.userDni >TRAYECTOS</button>
 
-      <button mat-button routerLink="vehiculos">VEHICULOS</button>
-    </div>
+      <button mat-button routerLink="vehiculos" class="buttonsin" *ngIf=loginService.userDni >VEHICULOS</button>
+    
   </div>
 
 

@@ -7,7 +7,7 @@ import { Vehiculo } from '../model/Vehiculo';
 })
 export class VehiculoService {
 
-  URL = 'http://localhost:8080/api/vehiculos/';
+  URL = 'https://elbuenconductor.herokuapp.com/api/vehiculos/';
   
   //inyectamos el httpclient
   constructor(private http:HttpClient) { }

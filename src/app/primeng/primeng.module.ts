@@ -5,7 +5,7 @@ import {MenuModule} from 'primeng/menu';
 import {ContextMenuModule} from 'primeng/contextmenu';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {TableModule} from 'primeng/table';
-;
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [],
@@ -14,13 +14,15 @@ import {TableModule} from 'primeng/table';
     ContextMenuModule,
     MenuModule,
     BreadcrumbModule,
-    TableModule
+    TableModule,
+    CalendarModule
   ],
   exports:[ 
     ContextMenuModule,
     MenuModule,
     BreadcrumbModule,
-    TableModule
+    TableModule,
+    CalendarModule
   ]
 })
 export class PrimengModule { }

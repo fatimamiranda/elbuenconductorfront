@@ -1,17 +1,31 @@
 <app-breadcrumb> </app-breadcrumb>
 
-<div class="datosPersonales" >
+<div class="container">
+     <div class="panel">
+          <div class="expansion">
+           
+           <!-- <button class="expansionButton" mat-button  routerLink="/datospersonales">Mis datos personales </button> <br> -->
+           <button class="expansionButton" mat-button  routerLink="/facturas">Mis facturas</button> <br>
+           <button class="expansionButton" mat-button  routerLink="/datosbanco">Mis Datos Bancarios</button> <br>
+           <button class="expansionButton" mat-button  routerLink="/datosbanco">Comparación con otros usuarios</button> <br>
+           
+          </div>
+          
+          <div class="datosPersonales" >
                         
-    <h3> Datos Personales: </h3>
-         <p> <b> Nombre  </b> {{cliente.nombre}} </p>
-         <p> <b> NIF / NIE  </b> {{cliente.dni}} </p> <!--Posible mejora: NIF/NIE-->
-         <p> <b> Primer apellido  </b> {{cliente.apellido1}} </p>
-         <p> <b> Segundo apellido  </b> {{cliente.apellido2}} </p>
-         <p> <b> Código Postal  </b> {{cliente.zipCode}} </p>
-         <p> <b> Fecha de nacimiento  </b> {{cliente.fechaNacimiento | date : 'dd-MM-yyyy'}} </p>
-         <p> <b> Fecha de carnet  </b> {{cliente.fechaCarnet | date : 'dd-MM-yyyy'}} </p>
-         <!-- <p> <b> Calidad de conducción  </b> {{cliente.calidadConduccion}} </p> Aquí podriamos añadir un range de prime -->
-    <!-- sexo?-->
+               <h3> Datos Personales: </h3>
+                    <p> <b> Nombre  </b> {{cliente.nombre}} </p>
+                    <p> <b> NIF / NIE  </b> {{cliente.dni}} </p> <!--Posible mejora: NIF/NIE-->
+                    <p> <b> Primer apellido  </b> {{cliente.apellido1}} </p>
+                    <p> <b> Segundo apellido  </b> {{cliente.apellido2}} </p>
+                    <p> <b> Código Postal  </b> {{cliente.zipCode}} </p>
+                    <p> <b> Fecha de nacimiento  </b> {{cliente.fechaNacimiento | date : 'dd-MM-yyyy'}} </p>
+                    <p> <b> Fecha de carnet  </b> {{cliente.fechaCarnet | date : 'dd-MM-yyyy'}} </p>
+                    <!-- <p> <b> Calidad de conducción  </b> {{cliente.calidadConduccion}} </p> Aquí podriamos añadir un range de prime -->
+               <!-- sexo?-->
+           
+               
+               </div>
 
-    
-    </div>
+     </div>
+</div>
