@@ -16,7 +16,6 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileService } from './services/profile.service';
 import { LoginService } from './services/login.service';
 import { HomeComponent } from './components/home/home.component';
-import { RegistreComponent } from './components/registre/registre.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { TrayectosComponent } from './components/trayectos/trayectos.component';
@@ -31,7 +30,6 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     ProfileComponent,
     LoginComponent,
     HomeComponent,
-    RegistreComponent,
     VehiculosComponent,
     TrayectosComponent,
     PanelexpansionComponent,

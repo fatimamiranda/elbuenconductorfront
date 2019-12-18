@@ -12,9 +12,8 @@
 .ventajas{
     display: flex;
     flex-direction: column;
-    background-color: grey;
     width: 500px;
-   
+    left: 20px;
     
 }
 

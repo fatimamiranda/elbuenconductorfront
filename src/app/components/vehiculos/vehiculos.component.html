@@ -1,4 +1,38 @@
-<p>vehiculos works!</p>
+<h1>Parque de Vehiculos</h1>
+<div class='ui-g-12 ui-md-12 ui-lg-12'>
+    <p-table class=" table" *ngIf="Vehiculos"  [value]="Vehiculos">
+    <ng-template pTemplate="header">
+    <tr>
+        <th> Marca </th>
+        <th> Modelo </th>
+        <th> Combustible </th>
+        <th> Color </th>
+        <th> Matrícula </th>
+        <th> Fecha Matriculación </th>
+      
+    </tr>
+     </ng-template>
+     <ng-template pTemplate="body" let-vehiculo>
+    <tr   >
+        <td > {{vehiculo.matricula}} </td>
+        <td > {{vehiculo.modelo}} </td>
+        <td>  {{vehiculo.combustible}} </td>
+        <td>  {{vehiculo.color}} </td>
+        <td>  {{vehiculo.matricula}} </td>
+        <td>  {{vehiculo.fechaMatriculacion | date: "dd/MM/yyyy"}} </td>
+    </tr>
+     </ng-template>
+</p-table>
+</div>
+
+<!--<table mat-table [dataSource]="Vehiculos">
+    <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef> Matricula </th>
+        <td mat-cell *matCellDef="let vehiculo of Vehiculo"> {{vehiculo.matricula}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>-->
 
 
 <!-- TODO hacer una lista con ngfor que muestre los vehiculos -->
