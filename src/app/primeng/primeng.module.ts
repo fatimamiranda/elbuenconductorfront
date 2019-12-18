@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {MenuModule} from 'primeng/menu';
-import {MenuItem} from 'primeng/api';
 import {ContextMenuModule} from 'primeng/contextmenu';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
+import {TableModule} from 'primeng/table';
 ;
 
 @NgModule({
@@ -13,13 +13,14 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
     CommonModule,
     ContextMenuModule,
     MenuModule,
-    BreadcrumbModule
-    
+    BreadcrumbModule,
+    TableModule
   ],
   exports:[ 
     ContextMenuModule,
     MenuModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    TableModule
   ]
 })
 export class PrimengModule { }
