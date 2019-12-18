@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/model/Cliente';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/services/profile.service';
-<<<<<<< HEAD
-=======
 import { MenuItem } from 'primeng/api/primeng-api';
 import { LoginService } from 'src/app/services/login.service';
->>>>>>> dbfbe50eda08c1704d5dd79db364f78a6144b4e8
 
 @Component({
   selector: 'app-profile',
