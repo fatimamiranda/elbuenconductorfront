@@ -6,7 +6,7 @@ import { User } from '../model/User';
 })
 export class UserService {
   
-  private isUserLoggedIn;
+  private isUserLoggedIn:boolean;
   public usserLogged:User;
 
   constructor() { 

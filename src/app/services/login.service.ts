@@ -6,14 +6,36 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
- 
-  constructor(private http: HttpClient) {
+  DNIs:String[] = ['12345678A','87654321V','44678910Y'];
+  userDni:String = undefined;
+
+  constructor() {
   }
 
+  logIn(inputDni:String):boolean{
+
+    let isLogged:boolean = false;
+    console.log(inputDni);
+
+    if (this.DNIs.includes(inputDni)){
+      
+      this.userDni = inputDni;
+      isLogged = true;
+    }
+
+    console.log(isLogged);
+    return isLogged;
+  }
+
+  
+
+  /*
   login(username:string, password:string) {
     return this.http.post('https://reqres.in/api/login', {
       email: username,
       password: password,     
     });     
   }
+  */
+
 }

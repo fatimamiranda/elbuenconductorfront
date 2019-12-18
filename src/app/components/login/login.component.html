@@ -2,9 +2,9 @@
   <h1>Iniciar sesión</h1>
   
   <form class="form">
-    <input type="text" #username name="username" placeholder="Username">
+    <input type="text" #username name="username" placeholder="Username" [(ngModel)]=inputDni>
     <input type="password" #password name="password" placeholder="Password">
-    <button type="submit" (click)="logIn(username.value, password.value, $event)" id="login-button">Login</button>
+    <button type="submit" (click)="logIn(inputDni)" id="login-button">Login</button>
   </form>
 </div>
 

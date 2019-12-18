@@ -9,14 +9,13 @@ import { TrayectosComponent } from './components/trayectos/trayectos.component';
 
 
 const routes: Routes = [
-  {path:'', redirectTo: 'home', pathMatch: 'full'},
+  {path:'', redirectTo: 'login', pathMatch: 'full'},
   {path: 'home', component: HomeComponent,  pathMatch: 'full'},
   {path: 'login', component: LoginComponent,  pathMatch: 'full'},
-  {path: 'registre', component: RegistreComponent,  pathMatch: 'full'},
   {path:"perfil", component:ProfileComponent},
   {path:"vehiculos", component:VehiculosComponent}, 
   {path:"trayectos", component:TrayectosComponent}, 
-  {path: '**', redirectTo: 'home'}
+  {path: '**', redirectTo: 'login'}
 ];
 
 @NgModule({
