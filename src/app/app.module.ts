@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { PrimengModule } from './primeng/primeng.module';
 import { MaterialModule } from './material/material.module';
+import { RouterModule } from '@angular/router'; 
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     PrimengModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule
   ],
   providers: [ProfileService, LoginService],
   bootstrap: [AppComponent]

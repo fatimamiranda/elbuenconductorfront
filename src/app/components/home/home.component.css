@@ -1,5 +1,24 @@
 .container{
     margin: 0;
+    padding: 20px;
     width: 100%;
+    background-image: url("../../../assets/viaje.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+  
 }
 
+.ventajas{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    width: 500px;
+   
+    
+}
+
+.welcome h3{
+  font-size: 4em;
+  color: white;
+}

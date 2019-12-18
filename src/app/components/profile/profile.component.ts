@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/model/Cliente';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/services/profile.service';
-import { MenuItem } from 'primeng/api/primeng-api';
 
 @Component({
   selector: 'app-profile',
