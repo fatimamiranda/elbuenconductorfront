@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     
+    this.cliente = new Cliente();
     
     //Ahora necesitamos obtener un cliente pero necesita un dni ¿cómo le eviamos el dni? (sin que sea hardcodeado)
     this.clienteService.getCliente('12345678A').subscribe(data => {

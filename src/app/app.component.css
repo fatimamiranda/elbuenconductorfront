@@ -6,6 +6,26 @@
     width: 100%;
 }
 
+.menu{
+    width: 100%;
+    background-color: #C5281C;
+    color: white;
+    
+}
+
+.menu button{
+    width: 10%;
+    padding: 10px;
+}
+
+.logo{
+    width: 100%;
+}
+
+.logo img{
+    width:100%;
+    vertical-align: top;
+}
 
 
 /* 

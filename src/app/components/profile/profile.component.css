@@ -20,14 +20,8 @@ header{
     text-align: center;
 }
 
-
-.logo img{
-    width:100%;
-    vertical-align: top;
-}
-
 .welcome{
-    text-align: right;
+    left: 0;
 }
 
 .imagen{
@@ -35,7 +29,7 @@ header{
 }
 
 .imagen img{
-    vertical-align: top;
+  
     width: 100%;
 }
 
@@ -45,4 +39,10 @@ header{
 
 .expansion{
     width: 20%;
+}
+
+.datosPersonales{
+    border: 1px solid grey;
+    padding: 2px;
+    
 }

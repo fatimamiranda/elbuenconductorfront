@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserService } from './services/user.service';
 import { VehiculosComponent } from './components/vehiculos/vehiculos.component';
 import { TrayectosComponent } from './components/trayectos/trayectos.component';
+import { PanelexpansionComponent } from './components/panelexpansion/panelexpansion.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TrayectosComponent } from './components/trayectos/trayectos.component';
     HomeComponent,
     RegistreComponent,
     VehiculosComponent,
-    TrayectosComponent
+    TrayectosComponent,
+    PanelexpansionComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { TrayectosComponent } from './components/trayectos/trayectos.component';
     PrimengModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule
   ],
   providers: [ProfileService, LoginService, UserService],
   bootstrap: [AppComponent]

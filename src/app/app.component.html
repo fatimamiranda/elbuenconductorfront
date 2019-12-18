@@ -1,31 +1,45 @@
 <div class="container">
   <div class="menu">
   
-    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="home">Home </button>
-    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="perfil">Perfil</button>
-    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="trayectos">Trayectos</button>
-    <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="vehiculos">Vehiculos</button>
-     
-</div>
- 
-<!-- <nav> 
-  <mat-menu #appMenu="matMenu">
-    <button mat-menu-item routerLink="home">Home</button>
-    <button mat-menu-item  routerLink="perfil" >Perfil</button>
-    <button mat-menu-item routerLink="trayectos">Trayectos</button>
-    <button mat-menu-item  routerLink="vehiculos" >Vehiculos</button>
-    <button mat-menu-item routerLink="registre" >Registrate</button>
-    <button mat-menu-item routerLink="login" >Login </button>
-  </mat-menu>
+    <button mat-button [matMenuTriggerFor]="aboveMenu">
+      <div class="logo">
+        <img src="../../../assets/Generali_logo_Horizontal_white.svg" alt="">
+      </div>
+    </button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+    
+    </mat-menu>
 
-  <button mat-flat-button [matMenuTriggerFor]="appMenu" >Menu</button>
+    <button mat-button [matMenuTriggerFor]="aboveMenu">HOME</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+    
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="belowMenu">PERFIL</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="beforeMenu">TRAYECTOS</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    
+    
+    <button mat-button [matMenuTriggerFor]="afterMenu">VEHICULOS</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
 
-</nav> -->
+  </div>
 
 
 <nav class="menuMovil">
 
-  <mat-menu #appMenu2="matMenu" >
+   <mat-menu #appMenu2="matMenu" >
     <button   mat-menu-item   routerLink="home">Home </button>
     
     <button   mat-menu-item   routerLink="perfil" *ngIf="usserLogged">Perfil</button>
@@ -38,8 +52,7 @@
 
     <button mat-icon-button [matMenuTriggerFor]="appMenu2"> MENU </button>
 
-
-
+ 
 </nav>
 
 
