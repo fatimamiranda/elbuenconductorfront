@@ -14,7 +14,12 @@
       <button mat-button routerLink="trayectos" class="buttonsin" *ngIf=loginService.userDni >TRAYECTOS</button>
 
       <button mat-button routerLink="vehiculos" class="buttonsin" *ngIf=loginService.userDni >VEHICULOS</button>
+
+      <button mat-button routerLink="login" class="buttonsin" *ngIf=!loginService.userDni>
+        <i class="material-icons"> perm_identity </i>
+      </button>
     
+
   </div>
 
 

@@ -184,8 +184,8 @@ header{
 }
 
 .content{
-    width: 90%;
-    margin-top: 50px;
+    width: 100%;
+    margin-top: 25px;
 }
 
 .menuMovil{
@@ -196,8 +196,7 @@ header{
 .calidadBtn{
     background-color:  #C5281C;
     text-align: center;
-    margin-left: 95px;
-
+    
 }
 }
 

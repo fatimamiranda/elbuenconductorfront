@@ -9,13 +9,13 @@
       <div class="content">
           <div class="area">
             <div class="data">
-                <i class="material-icons"> traffic </i> <!--o navigation?-->
+                <!-- <i class="material-icons"> traffic </i> o navigation? -->
                 <h3>Trayectos entre rango de fechas</h3>
         
             </div>
             <hr>
             <div class="calendario">
-                <p-calendar class="input" [(ngModel)]="inicio" placeholder="Fecha inicio"></p-calendar>
+                <p-calendar class="input" [(ngModel)]="inicio" placeholder="Fecha inicio" styleClass="myWid70" ></p-calendar>
         
                 <p-calendar class="input" [(ngModel)]="fin" placeholder="Fecha fin"></p-calendar>
                 <p-button (click)='getTrayectosOut(inicio,fin)' styleClass="ui-button-danger" label="Confirmar" class="btn"></p-button>
@@ -73,10 +73,11 @@
 
                         <mat-card-header>
                             <div mat-card-avatar class="example-header-image"></div>
-                            <mat-card-title> </mat-card-title>
-                            <mat-card-subtitle></mat-card-subtitle>
+                            <!-- <mat-card-title> </mat-card-title>
+                            <mat-card-subtitle></mat-card-subtitle> -->
                           </mat-card-header>
                           <mat-card-content class="datos">
+
                             <div>
                                 <p>  {{trayecto.inicio | date: "dd/MM/yyyy hh:mm"}} </p>  <br>
                                 <p>  {{trayecto.fin | date: "dd/MM/yyyy hh:mm"}} </p> <br>
@@ -84,11 +85,11 @@
                                 <b> <p> {{trayecto.precio | number: "0.2-2"}} € </p></b>
                             </div>
                           
-                           <button mat-fab [ngClass] ="{
+                           <button mat-fab  [ngClass] ="{
                                'nivel4' : trayecto.calidad >= 0 && trayecto.calidad < 3.33,
                                'nivel3' : trayecto.calidad >= 3.33 && trayecto.calidad < 6.66,
                                'nivel1' : trayecto.calidad >= 6.66 && trayecto.calidad < 10
-                           }"> {{trayecto.calidad | number: "0.2-2"}}  </button>
+                           }">  {{trayecto.calidad | number: "0.2-2"}} </button>
                             
                          </mat-card-content>
                          <mat-card-actions class="actions">

@@ -64,11 +64,15 @@
     
     header{
         width: 100%;
-        color: rgb(131, 127, 127);
+        color: white;
         background-color: #C5281C;
         padding: 10px;
     }
     
+    .data{
+        margin-left: 0px;
+    }
+
     .imagen{
         width: 20%;
     }
@@ -79,9 +83,9 @@
     
     .panel{
         display: flex;
-        width: 90%;
+        /* width: 90%;
      
-        margin: auto;
+        margin: auto; */
     }
     
     .expansion{
@@ -139,7 +143,8 @@
     
     .content{
         width: 90%;
-        margin-top: 50px;
+        margin-top: -22px;
+        margin-left: 16px;
     }
     
     .menuMovil{

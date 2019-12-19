@@ -67,9 +67,9 @@
 
     .panel{
         display: flex;
-        width: 90%;
+        width: 153%;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 0px;
     }
     
     .content{
@@ -133,6 +133,10 @@
     .actions{
         text-align:  center;
 
+    }
+
+    .datos p{
+        margin: 0px;
     }
 
 }
