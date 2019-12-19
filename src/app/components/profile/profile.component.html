@@ -2,7 +2,7 @@
      <header>
           <p> Estás consultando tu seguro de coche por trayecto </p>
      </header>
-     <app-breadcrumb> </app-breadcrumb>
+     <!-- <app-breadcrumb> </app-breadcrumb> -->
      <div class="panel">
           <div class="expansion">
            
@@ -12,11 +12,29 @@
            <button class="expansionButton" mat-button  routerLink="/datosbanco">Comparación con otros usuarios</button> <br>
            
           </div>
-          <div class="bienvenida">
-               <h2> HOLA, {{cliente.nombre}}</h2>
-               <h3> Bienvenid@ a tu seguro por trayecto </h3>
-               <img src="" alt="">
-          </div>
+         <div class="content">
+              <div class="area">
+                    <i class="material-icons"> account_circle </i>      
+                    <h3> Panel de usuario </h3>
+                    <nav class="menuMovil">
+                         <mat-menu #appMenu2="matMenu" >
+                              <button class="expansionButton"  mat-menu-item  routerLink="/datospersonales">Mis datos personales </button> <br>
+                              <button class="expansionButton"  mat-menu-item  routerLink="/facturas">Mis facturas</button> <br>
+                              <button class="expansionButton"  mat-menu-item  routerLink="/datosbanco">Mis Datos Bancarios</button> <br>
+                              <button class="expansionButton"  mat-menu-item  routerLink="/datosbanco">Comparación con otros usuarios</button> <br>
+                         </mat-menu>
+                         <button class="btn-icono" mat-icon-button [matMenuTriggerFor]="appMenu2"><i class="material-icons">menu</i></button>
+                    </nav>
+               </div>    
+               <hr>
+               <div class="bienvenida">
+                    <h2> HOLA, {{cliente.nombre}} :</h2>
+                    <h4> Bienvenid@ a tu seguro por trayecto </h4>
+                    
+                    <h3> La calidad de tu conducción ha sido: </h3>
+               </div>
+              
+         </div>
 
      </div>
     

@@ -1,3 +1,4 @@
+
 .container{
     margin: 0;
     width: 100%;
@@ -21,7 +22,7 @@ header{
 
 .panel{
     display: flex;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .expansion{
@@ -38,19 +39,148 @@ header{
 
 .bienvenida{
     padding: 10px;
-    width: 50%;
-    background-color: rgb(216, 204, 204);
-    color: white;
+    width: 100%;
+    background-color: #FDFDFD;
+    color: #686868;
+    border-radius: 5px;
 }
 
 
 .bienvenida h2{
     font-weight: normal;
-    font-size: 1.3em;
+    font-size: 2em;
+    color: #C5281C;;
 }
 
 .bienvenida h3{
     font-weight: normal;
-    font-size: 0.9em;
+    font-size: 1.5em;
 }
+
+.bienvenida h4{
+    font-weight: normal;
+    font-size: 1em;
+}
+.area{
+    display: flex;
+}
+
+.area h3{
+    margin: 0;
+    color:#C5281C;
+    font-size: 1.8em;
+    
+    font-weight: normal;
+}
+
+.area i{
+    color:#C5281C;
+    margin-right: 10px;
+    font-size: 2em;
+}
+
+.content{
+    width: 40%;
+}
+
+.menuMovil{
+    display: none;
+}
+
 /*Responsive*/
+
+@media (min-width: 320px) and (max-width: 660px) {
+
+    
+.container{
+    margin: 0;
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    color: white;
+    background-color: #C5281C;
+    padding: 10px;
+}
+
+.imagen{
+    width: 20%;
+}
+
+.imagen img{
+   width: 100%;
+}
+
+.panel{
+    display: flex;
+    width: 90%;
+ 
+    margin: auto;
+}
+
+.expansion{
+    width: 20%;
+    margin-left:60px;
+    display: none;
+}
+
+.expansion button {
+    width: 70%;
+    background-color: #C5281C;
+    color: white;
+    margin: 10px;
+}
+
+.bienvenida{
+    padding: 10px;
+    width: 100%;
+    background-color: #FDFDFD;
+    color: #686868;
+    border-radius: 5px;
+}
+
+.bienvenida h2{
+    font-weight: normal;
+    font-size: 2em;
+    color: #C5281C;;
+}
+
+.bienvenida h3{
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.bienvenida h4{
+    font-weight: normal;
+    font-size: 1em;
+}
+.area{
+    display: flex;
+}
+
+.area h3{
+    margin: 0px !important;
+    color:#C5281C;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.area i{
+    color:#C5281C;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.content{
+    width: 90%;
+    margin-top: 50px;
+}
+
+.menuMovil{
+    display: block;
+    margin-left: auto !important;
+}
+
+}
+

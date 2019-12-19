@@ -1,0 +1,33 @@
+.panel{
+    display: flex;
+    margin-top: 50px;
+}
+
+.content{
+    width: 40%;
+   
+}
+
+.calendario{
+    margin-top: 20px;
+}
+
+.input{
+    margin: 10px;
+    padding: 16px;
+}
+
+.btn{
+    background-color: #C5281C;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.data{
+    padding: 20px;
+    display: flex;
+}
+
+.tab{
+    margin-top: 80px;
+}

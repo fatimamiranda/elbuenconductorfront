@@ -1,31 +1,46 @@
-<app-breadcrumb> </app-breadcrumb>
+<!-- <app-breadcrumb> </app-breadcrumb> -->
 
 <div class="container">
+     <header>
+          <p> Estás consultando tu seguro de coche por trayecto </p>
+     </header>
      <div class="panel">
           <div class="expansion">
            
-           <!-- <button class="expansionButton" mat-button  routerLink="/datospersonales">Mis datos personales </button> <br> -->
+           <button class="expansionButton" mat-button  routerLink="/perfil"> Perfil </button> <br> 
            <button class="expansionButton" mat-button  routerLink="/facturas">Mis facturas</button> <br>
            <button class="expansionButton" mat-button  routerLink="/datosbanco">Mis Datos Bancarios</button> <br>
            <button class="expansionButton" mat-button  routerLink="/datosbanco">Comparación con otros usuarios</button> <br>
            
           </div>
-          
-          <div class="datosPersonales" >
-                        
-               <h3> Datos Personales: </h3>
-                    <p> <b> Nombre  </b> {{cliente.nombre}} </p>
-                    <p> <b> NIF / NIE  </b> {{cliente.dni}} </p> <!--Posible mejora: NIF/NIE-->
-                    <p> <b> Primer apellido  </b> {{cliente.apellido1}} </p>
-                    <p> <b> Segundo apellido  </b> {{cliente.apellido2}} </p>
-                    <p> <b> Código Postal  </b> {{cliente.zipCode}} </p>
-                    <p> <b> Fecha de nacimiento  </b> {{cliente.fechaNacimiento | date : 'dd-MM-yyyy'}} </p>
-                    <p> <b> Fecha de carnet  </b> {{cliente.fechaCarnet | date : 'dd-MM-yyyy'}} </p>
-                    <!-- <p> <b> Calidad de conducción  </b> {{cliente.calidadConduccion}} </p> Aquí podriamos añadir un range de prime -->
-               <!-- sexo?-->
-           
-               
-               </div>
-
+          <div class="content">
+               <div class="area">
+                    <i class="material-icons"> account_circle </i>      
+                    <h3> Datos Personales: </h3>
+                    <nav class="menuMovil">
+                         <mat-menu #appMenu2="matMenu" >
+                              <button class="expansionButton"  mat-menu-item  routerLink="/datospersonales"> Perfil </button> <br>
+                              <button class="expansionButton"  mat-menu-item  routerLink="/facturas">Mis facturas</button> <br>
+                              <button class="expansionButton"  mat-menu-item  routerLink="/datosbanco">Mis Datos Bancarios</button> <br>
+                              <button class="expansionButton"  mat-menu-item  routerLink="/datosbanco">Comparación con otros usuarios</button> <br>
+                         </mat-menu>
+                         <button class="btn-icono" mat-icon-button [matMenuTriggerFor]="appMenu2"><i class="material-icons">menu</i></button>
+                    </nav>
+               </div>    
+               <hr>
+               <div class="datosPersonales" >
+                    <div class="data">
+                         <div> <span>  Nombre : </span>  {{cliente.nombre}} </div>
+                         <div> <span> NIF / NIE : </span> {{cliente.dni}} </div>
+                         <div> <span> Primer apellido : </span> {{cliente.apellido1}}</div>
+                         <div><span> Segundo apellido:</span>  {{cliente.apellido2}}  </div>
+                         <div><span> Código Postal: </span>{{cliente.zipCode}} </div>
+                         <div><span> Fecha de nacimiento: </span> {{cliente.fechaNacimiento | date : 'dd-MM-yyyy'}}  </div>
+                         <div><span> Fecha de carnet: </span> {{cliente.fechaCarnet | date : 'dd-MM-yyyy'}} <br></div>
+                         <!-- <span> Calidad de conducción  {{cliente.calidadConduccion}}</span> Aquí podriamos añadir un range de prime -->
+                         <!-- sexo?-->
+                    </div>
+                </div>
+          </div>
      </div>
 </div>

@@ -1,43 +1,65 @@
-<h2>Trayectos entre rango de fechas</h2>
+<div class="container">
+    <header>
+        <p> Estás consultando tus trayectos. ¡Filtra por fechas para acotar tu consulta! </p>
+   </header>
+  <div class="panel">
+      <div class="expansion">
+          <!--aqui un menu??-->
+      </div>
+      <div class="content">
+          <div class="area">
+            <div class="data">
+                <i class="material-icons"> traffic </i> <!--o navigation?-->
+                <h3>Trayectos entre rango de fechas</h3>
+        
+            </div>
+            <hr>
+            <div class="calendario">
+                <p-calendar class="input" [(ngModel)]="inicio" placeholder="Fecha inicio"></p-calendar>
+        
+                <p-calendar class="input" [(ngModel)]="fin" placeholder="Fecha fin"></p-calendar>
+                <p-button (click)='getTrayectosOut(inicio,fin)' styleClass="ui-button-danger" label="Confirmar" class="btn"></p-button>
+        
+            </div>
+        </div>
+    </div>
+</div> 
+        
+            
+            <div class='ui-g-12 ui-md-12 ui-lg-10 tab'>
+                <p-table class=" table" *ngIf="trayectos"  [value]="trayectos">
+                <ng-template pTemplate="header">
+                <tr>
+                    <th> Matrícula </th>
+                    <th> Km Recorridos </th>
+                    <th> Número Acelerones </th>
+                    <th> Número Frenazos </th>
+                    <th> RPM Medias </th>
+                    <th> Fecha Inicio </th>
+                    <th> Hora Inicio </th>
+                    <th> Fecha Fin </th>
+                    <th> Hora Fin </th>
+                    <th> Precio </th>
+                
+                </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-trayecto>
+                <tr>
+                    <!--TODO matrícula en courier-->
+                    <td > {{trayecto.matricula}} </td>
+                    <td style="text-align: right;"> {{trayecto.kmRecorridos | number: "0.1-1"}} </td>
+                    <td style="text-align: right;">  {{trayecto.nAcelerones}} </td>
+                    <td style="text-align: right;">  {{trayecto.nFrenazos}} </td>
+                    <td style="text-align: right;">  {{trayecto.rpmMedias}} </td>
+                    <td>  {{trayecto.inicio | date: "dd/MM/yyyy"}} </td>
+                    <td>  {{trayecto.inicio | date: "hh:mm"}} </td>
+                    <td>  {{trayecto.fin | date: "dd/MM/yyyy"}} </td>
+                    <td>  {{trayecto.fin | date: "hh:mm"}} </td>
+                    <td style="text-align: right;">  {{trayecto.precio | number: "0.2-2"}} €</td>
+                </tr>
+                </ng-template>
+            </p-table>
+            </div>
+         
 
-<p-calendar [(ngModel)]="inicio" placeholder="Fecha inicio"></p-calendar>
-
-<p-calendar [(ngModel)]="fin" placeholder="Fecha fin"></p-calendar>
-
-<p-button (click)='getTrayectosOut(inicio,fin)' styleClass="ui-button-danger" label="Confirmar" ></p-button>
-
-<div class='ui-g-12 ui-md-12 ui-lg-10'>
-    <p-table class=" table" *ngIf="trayectos"  [value]="trayectos">
-    <ng-template pTemplate="header">
-    <tr>
-        <th> Matrícula </th>
-        <th> Km Recorridos </th>
-        <th> Número Acelerones </th>
-        <th> Número Frenazos </th>
-        <th> RPM Medias </th>
-        <th> Fecha Inicio </th>
-        <th> Hora Inicio </th>
-        <th> Fecha Fin </th>
-        <th> Hora Fin </th>
-        <th> Precio </th>
-      
-    </tr>
-     </ng-template>
-     <ng-template pTemplate="body" let-trayecto>
-    <tr>
-        <!--TODO matrícula en courier-->
-        <td > {{trayecto.matricula}} </td>
-        <td style="text-align: right;"> {{trayecto.kmRecorridos | number: "0.1-1"}} </td>
-        <td style="text-align: right;">  {{trayecto.nAcelerones}} </td>
-        <td style="text-align: right;">  {{trayecto.nFrenazos}} </td>
-        <td style="text-align: right;">  {{trayecto.rpmMedias}} </td>
-        <td>  {{trayecto.inicio | date: "dd/MM/yyyy"}} </td>
-        <td>  {{trayecto.inicio | date: "hh:mm"}} </td>
-        <td>  {{trayecto.fin | date: "dd/MM/yyyy"}} </td>
-        <td>  {{trayecto.fin | date: "hh:mm"}} </td>
-        <td style="text-align: right;">  {{trayecto.precio | number: "0.2-2"}} €</td>
-    </tr>
-     </ng-template>
-</p-table>
-</div>
 

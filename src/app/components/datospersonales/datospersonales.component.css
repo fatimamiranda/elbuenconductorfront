@@ -1,25 +1,6 @@
-
-.datosPersonales{
-    padding: 12px;
-    width: 40%;
-    background-color: rgb(216, 204, 204);
-    color: black;
-    
-}
-
-.datosPersonales h3{
-    font-weight: normal;
-    font-size: 1.2em;
-}
- 
-.datosPersonales p{
-    font-size: 0.9em;
-}
-
-
 .panel{
     display: flex;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .expansion{
@@ -33,3 +14,139 @@
     color: white;
     margin: 10px;
 }
+
+.content{
+    width: 40%;
+}
+
+.area{
+    display: flex;
+}
+
+.area i{
+    margin-right: 10px;
+}
+
+.data{
+    margin-left: 43px;
+}
+
+.datosPersonales{
+    padding: 12px;
+    width: 100%;
+    background-color: #FDFDFD;
+    color: #686868;
+    border-radius: 5px;
+    
+}
+
+ 
+.data div span{
+    font-size: 1.2em;
+    color: #C5281C;
+}
+
+.data div{
+    margin-top: 10px;
+}
+.menuMovil{
+    display: none;
+}
+/*Responsive*/
+
+@media (min-width: 320px) and (max-width: 660px) {
+
+    
+    .container{
+        margin: 0;
+        width: 100%;
+    }
+    
+    header{
+        width: 100%;
+        color: white;
+        background-color: #C5281C;
+        padding: 10px;
+    }
+    
+    .imagen{
+        width: 20%;
+    }
+    
+    .imagen img{
+       width: 100%;
+    }
+    
+    .panel{
+        display: flex;
+        width: 90%;
+     
+        margin: auto;
+    }
+    
+    .expansion{
+        width: 20%;
+        margin-left:60px;
+        display: none;
+    }
+    
+    .expansion button {
+        width: 70%;
+        background-color: #C5281C;
+        color: white;
+        margin: 10px;
+    }
+    
+    .bienvenida{
+        padding: 10px;
+        width: 100%;
+        background-color: #FDFDFD;
+        color: #686868;
+        border-radius: 5px;
+    }
+    
+    .bienvenida h2{
+        font-weight: normal;
+        font-size: 2em;
+        color: #C5281C;;
+    }
+    
+    .bienvenida h3{
+        font-weight: normal;
+        font-size: 1.5em;
+    }
+    
+    .bienvenida h4{
+        font-weight: normal;
+        font-size: 1em;
+    }
+    .area{
+        display: flex;
+    }
+    
+    .area h3{
+        margin: 0px !important;
+        color:#C5281C;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+    
+    .area i{
+        color:#C5281C;
+        margin-right: 10px;
+        font-size: 1.8em;
+    }
+    
+    .content{
+        width: 90%;
+        margin-top: 50px;
+    }
+    
+    .menuMovil{
+        display: block;
+        margin-left: auto !important;
+    }
+    
+    }
+    
+    

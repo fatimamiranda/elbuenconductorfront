@@ -19,21 +19,21 @@
 
 
 <nav class="menuMovil">
-
-   <mat-menu #appMenu2="matMenu" >
-    <button   mat-menu-item   routerLink="home">Home </button>
+  <div class="logo"><img src="../../../assets/Generali_logo_Horizontal_white.svg" alt="" routerLink="home"></div>
+  
+  <div class="menum">
+    <mat-menu #appMenu2="matMenu" >
     
-    <button   mat-menu-item   routerLink="perfil" *ngIf="usserLogged">Perfil</button>
-    <button   mat-menu-item   routerLink="trayectos" *ngIf="usserLogged" >Trayectos</button>
-    <button  mat-menu-item   routerLink="vehiculos"> Vehículos </button>
-
-    <button  mat-menu-item   routerLink="registre"> Registrate </button>
-    <button  mat-menu-item   routerLink="login">Login</button>
-  </mat-menu>
-
-    <button mat-icon-button [matMenuTriggerFor]="appMenu2"> MENU </button>
-
- 
+      <button   mat-menu-item   routerLink="home">Home </button>
+      <button   mat-menu-item   routerLink="perfil">Perfil</button>
+      <button   mat-menu-item   routerLink="trayectos" >Trayectos</button>
+      <button  mat-menu-item   routerLink="vehiculos"> Vehículos </button>
+      <button  mat-menu-item   routerLink="login" >Login</button>
+    </mat-menu>
+  
+      <button class="btn-icono" mat-icon-button [matMenuTriggerFor]="appMenu2"><i class="material-icons">more_vert</i></button>
+  
+  </div>
 </nav>
 
 <router-outlet></router-outlet> 

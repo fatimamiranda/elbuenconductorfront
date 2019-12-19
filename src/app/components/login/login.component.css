@@ -60,3 +60,89 @@
 
   margin-top: 10px;
 }
+
+
+@media (min-width: 320px) and (max-width: 660px) {
+  .container{
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    background-image: none;
+    background-color: #C5281C;
+    height: 600px;
+    display: block;
+    }
+
+      
+  .ventajas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 0.8em;
+    color: white;
+    padding: 0px;
+    
+    }
+
+  .ventajas div{
+    padding-left: 20px;
+    font-size: 0.8em;
+  }
+
+  .ventajas div i{
+    font-size: 1em;
+  }
+    
+  .welcome h3{
+    font-size: 1em;
+    color: white;
+    margin: 0;
+    margin-top: 0px;
+    padding-top: 25px;
+    padding-left: 20px;
+  }
+
+  .login{
+    width: 293px;
+    margin-top: 30px;
+    padding-left: 49px;
+    margin-left: 0px;
+  }
+
+  .login h4{
+    color: white;
+    font-size: 0.8em;
+    margin: 0px;
+    font-weight: normal;
+    text-align: center;
+    
+  }
+
+  .input{
+    width: 100%;
+    padding: 12px 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  
+  .login p {
+    color:white;
+    font-size: 0.5em;
+  }
+
+  .login button{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 90px;
+    background-color: yellow;
+  }
+
+
+}

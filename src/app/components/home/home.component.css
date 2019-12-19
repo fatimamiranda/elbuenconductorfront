@@ -1,23 +1,82 @@
 .container{
-    margin: 0;
-    padding: 20px;
-    width: 100%;
-    background-image: url("../../../assets/viaje.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1000px;
-  
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  background-image: url("../../../assets/viaje.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  display: flex;
+
 }
 
 .ventajas{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    left: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  left: 20px;
+  margin-left: 150px;
+  margin-top: 60px;
+  font-size: 1.5em;
+  color: white;
+  padding: 10px;
+  
+}
+
+.ventajas div{
+margin: 10px;
 }
 
 .welcome h3{
-  font-size: 4em;
-  color: white;
+font-size: 4em;
+color: white;
+margin: 0;
+margin-top: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 660px) {
+  .container{
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    background-image: none;
+    background-color: #C5281C;
+    height: 600px;
+    display: block;
+    }
+
+      
+  .ventajas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 0.8em;
+    color: white;
+    padding: 0px;
+    
+    }
+
+  .ventajas div{
+    padding-left: 20px;
+    font-size: 0.8em;
+  }
+
+  .ventajas div i{
+    font-size: 1em;
+  }
+    
+  .welcome h3{
+    font-size: 1em;
+    color: white;
+    margin: 0;
+    margin-top: 0px;
+    padding-top: 25px;
+    padding-left: 20px;
+  }
+
+
+
 }

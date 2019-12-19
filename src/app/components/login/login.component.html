@@ -6,12 +6,13 @@
             <div> <i class="material-icons"> done </i> Obtén métricas de tus trayectos </div>
             <div> <i class="material-icons"> done </i> Compara tus resultados con otros conductores cerca de ti
              </div>
-            </div>
+         </div>
 </div>
 <div class="login">
   <h4>Iniciar sesión</h4>
     <input class="input" type="text" #username name="username" placeholder="Username" [(ngModel)]=inputDni>
     <input class="input" type="password" #password name="password" placeholder="Password">
+    <a href=""><p> Forgot password </p></a>
     <button mat-raised-button	 type="submit" (click)="logIn(inputDni)" id="login-button">Login</button>
   </div>
 </div>
