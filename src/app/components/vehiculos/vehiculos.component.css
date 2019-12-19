@@ -35,18 +35,26 @@
     margin-top: 80px;
 }
 
-.conjuntoVehicles{
-   
-}
-
 .cardVehicle{
    
     display: flex;
+    justify-content: space-between;
     
 }
 
-.example.card{
-    margin: 30%;
+.example-card{
+    margin: 20px !important;
+}
+
+
+.mat-success {
+    background-color: green;
+    color: #fff;
+}
+
+.actions{
+    text-align:  center;
+
 }
 
 @media (min-width: 320px) and (max-width: 660px) {
@@ -104,5 +112,27 @@
         flex-direction: column;
     }
 
+        
+    .cardVehicle{
+    
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .example-card{
+        margin: 20px !important;
+    }
+
+
+    .mat-success {
+        background-color: green;
+        color: #fff;
+    }
+
+    .actions{
+        text-align:  center;
+
+    }
 
 }

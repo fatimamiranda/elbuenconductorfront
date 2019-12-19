@@ -10,7 +10,7 @@
           <div class="area">
                 <div class="data">
                     <i class="material-icons"> directions_car </i> 
-                    <h3>Parque de Vehiculos</h3>
+                    <h3>Vehículos Disponibles</h3>
                 </div>
                 <hr>
             </div>
@@ -45,7 +45,8 @@
 </div> -->
 
 
-  <div class="conjuntoVehicles">
+  <div 
+  class="conjuntoVehicles">
     <div class="cardVehicle">
         <mat-card class="example-card"  *ngFor="let vehiculo of Vehiculos">
             <mat-card-header>
@@ -53,19 +54,20 @@
               <mat-card-title>{{vehiculo.marca}}</mat-card-title>
               <mat-card-subtitle>{{vehiculo.modelo}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="../../../assets/golfplus.jpg" alt="">
-            <mat-card-content>
-                <p>  {{vehiculo.combustible}} </p>
-                <p>  {{vehiculo.color}} </p>
-                <p>  {{vehiculo.matricula}} </p>
-                <p>  {{vehiculo.fechaMatriculacion | date: "dd/MM/yyyy"}} </p>
+            <img mat-card-image src="../../../assets/cochebasico.jpg" alt="">
+            <mat-card-content class="datos">
+               <p> Combustible: {{vehiculo.combustible}} </p>  <br>
+               <p> Color: {{vehiculo.color}} </p> <br>
+               <p> Matricula: {{vehiculo.matricula}} </p> <br>
+               <p> Fecha Matriculación : {{vehiculo.fechaMatriculacion | date: "dd/MM/yyyy"}} </p> <br>
             
             </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
+             <mat-card-actions class="actions">
+              <button mat-raised-button [color]="'success'" >DISPONIBLE</button>
+              <button mat-raised-button>NO DISPONIBLE</button>
             </mat-card-actions>
           </mat-card>
       </div>
   </div>
+  <!--TODO añadir un resumen de la reserva-->
 </div>

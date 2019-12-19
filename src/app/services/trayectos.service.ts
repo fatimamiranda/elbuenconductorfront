@@ -8,6 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class TrayectosService {
 
+  topeFrenazosPorKm:number = 0.2;
+  topeAceleronesPorKm:number = 0.2;
+ topeRpm:number = 3500;
+  minRpm:number = 2500;
+  
   //declaramos la url
   URL = 'https://elbuenconductor.herokuapp.com/api/clientes/';
 
@@ -16,9 +21,63 @@ export class TrayectosService {
   constructor(private http: HttpClient) { }
 
   getTrayectos(dni:String, inicio:string, fin:string):Observable<Trayecto[]>{
-    //dni:String, inicio:string, fin:string
-    console.log('hola')
+   
     return this.http.get<Trayecto[]>(this.URL + dni + '/' + inicio + '/' + fin);
   
+  }
+
+  getFactorAcelerones(trayecto:Trayecto):number{
+    let tope:number = this.topeAceleronesPorKm * trayecto.kmRecorridos;
+    let factor:number;
+
+    if(trayecto.nAcelerones > tope) {
+			factor = 1.0;
+		} else {
+			factor = trayecto.nAcelerones/tope;
+		}
+		
+		return factor;
+
+  }
+
+  getFactorFrenazos( trayecto:Trayecto):number {
+		
+		let tope = this.topeFrenazosPorKm * trayecto.kmRecorridos;
+		
+		let factor;
+		
+		if(trayecto.nFrenazos > tope) {
+			factor = 1.0;
+		} else {
+			factor = trayecto.nFrenazos/tope;
+		}
+		
+		return factor;
+		
+  }
+  
+  getFactorRpm( trayecto:Trayecto) {
+		
+		let factor;
+		
+		if (trayecto.rpmMedias < this.minRpm) {
+			factor = 0;
+		} else if(trayecto.rpmMedias  < this.topeRpm){
+			factor = (trayecto.rpmMedias  - this.minRpm)
+					/ (this.topeRpm - this.minRpm);
+		} else {
+			factor = 1;
+		}
+		
+		return factor;
+  }
+  
+
+  getCalidadConduccion(trayecto:Trayecto):number{
+    
+    return 10 - 4 * (this.getFactorAcelerones(trayecto) + this.getFactorFrenazos(trayecto))
+    - 2 * this.getFactorRpm(trayecto);
+
+     
   }
 }

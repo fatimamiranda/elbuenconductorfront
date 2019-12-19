@@ -15,7 +15,8 @@ export class TrayectosComponent implements OnInit {
   trayectos:Trayecto[] = undefined;
   inicio:Date = undefined;
   fin:Date =undefined;
-
+  trayecto:Trayecto = undefined;
+  
   constructor(private router:Router, 
               private trayectosService:TrayectosService, 
               private loginService:LoginService) { }
@@ -41,7 +42,22 @@ export class TrayectosComponent implements OnInit {
       
       this.trayectos = data;
 
-      console.log(this.trayectos);
+      for (let trayecto of this.trayectos){
+        trayecto.mapImage = Math.floor(Math.random() * 5);
+        this.getCalidadConduccion(trayecto);
+      }
+
+
     });
   }    
+
+  getCalidadConduccion(trayecto:Trayecto){
+    let calidad:number;
+
+    calidad = this.trayectosService.getCalidadConduccion(trayecto);
+    trayecto.calidad = calidad;
+    
+  }
+
+
 }

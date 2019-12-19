@@ -32,6 +32,46 @@
     margin-top: 80px;
 }
 
+
+.cardTrayecto{
+   
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-card{
+    margin: 20px !important;
+    width: 20%;
+}
+
+
+.mat-success {
+    background-color: green;
+    color: #fff;
+}
+
+.actions{
+    text-align:  center;
+
+}
+
+.datos{
+    display: flex;
+}
+
+.datos p{
+    margin: 0;
+}
+
+.datos button{
+    margin: auto;
+    width: 30%;
+    background-color: white;
+    color: grey;
+}
+
+
 @media (min-width: 320px) and (max-width: 660px) {
 
     .container{
