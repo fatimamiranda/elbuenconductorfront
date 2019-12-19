@@ -87,6 +87,17 @@ header{
     display: none;
 }
 
+
+.calidadBtn{
+    background-color:  #C5281C;
+    /* text-align: center;
+    margin-left: 162px; */
+}
+
+.bienvenida div{
+    width: 100%;
+    text-align: center;
+}
 /*Responsive*/
 
 @media (min-width: 320px) and (max-width: 660px) {
@@ -182,5 +193,11 @@ header{
     margin-left: auto !important;
 }
 
+.calidadBtn{
+    background-color:  #C5281C;
+    text-align: center;
+    margin-left: 95px;
+
+}
 }
 

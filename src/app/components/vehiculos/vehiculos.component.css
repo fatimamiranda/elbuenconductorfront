@@ -1,3 +1,6 @@
+.area{
+    width: 65%;
+}
 .data{
     padding: 20px;
     display: flex;
@@ -32,6 +35,20 @@
     margin-top: 80px;
 }
 
+.conjuntoVehicles{
+   
+}
+
+.cardVehicle{
+   
+    display: flex;
+    
+}
+
+.example.card{
+    margin: 30%;
+}
+
 @media (min-width: 320px) and (max-width: 660px) {
     
     .container{
@@ -56,6 +73,7 @@
         padding: 20px;
         display: flex;
         text-align: center;
+        
     }
     
    
