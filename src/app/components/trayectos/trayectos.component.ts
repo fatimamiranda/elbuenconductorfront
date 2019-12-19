@@ -43,7 +43,7 @@ export class TrayectosComponent implements OnInit {
       this.trayectos = data;
 
       for (let trayecto of this.trayectos){
-        trayecto.mapImage = Math.floor(Math.random() * 5);
+        trayecto.mapImage = Math.floor(Math.random() * 6);
         this.getCalidadConduccion(trayecto);
       }
 

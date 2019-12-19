@@ -54,7 +54,13 @@
               <mat-card-title>{{vehiculo.marca}}</mat-card-title>
               <mat-card-subtitle>{{vehiculo.modelo}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="../../../assets/cochebasico.jpg" alt="">
+            <div [ngSwitch]="vehiculo.coeficiente">
+                <img mat-card-image *ngSwitchCase="1.2" src="../../../assets/golfplus.jpg" alt=""> 
+                <img mat-card-image *ngSwitchCase="0.8" src="../../../assets/seatibiza.jpg" alt="">
+                <img mat-card-image *ngSwitchDefault src="../../../assets/tesla.jpg" alt="">
+         
+            </div>
+            
             <mat-card-content class="datos">
                <p> Combustible: {{vehiculo.combustible}} </p>  <br>
                <p> Color: {{vehiculo.color}} </p> <br>

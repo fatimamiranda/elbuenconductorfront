@@ -63,10 +63,12 @@
                     <mat-card class="example-card"  *ngFor="let trayecto of trayectos">
                     
                         <div [ngSwitch]="trayecto.mapImage">
-                            <img mat-card-image *ngSwitchCase="0" src="../../../assets/mapa0.jpg" alt="">
-                            <img mat-card-image *ngSwitchCase="1" src="../../../assets/golfplus.jpg" alt="">
-                            <img mat-card-image *ngSwitchCase="2" src="../../../assets/usuario.png" alt="">
-                            <img mat-card-image *ngSwitchDefault src="../../../assets/mapa.jpg" alt="">  
+                            <img mat-card-image *ngSwitchCase="0" src="../../../assets/mapas/mapa0.jpg" alt="">
+                            <img mat-card-image *ngSwitchCase="1" src="../../../assets/mapas/mapa1.jpg" alt="">
+                            <img mat-card-image *ngSwitchCase="2" src="../../../assets/mapas/mapa2.jpg" alt="">
+                            <img mat-card-image *ngSwitchCase="3" src="../../../assets/mapas/mapa3.jpg" alt="">  
+                            <img mat-card-image *ngSwitchCase="4" src="../../../assets/mapas/mapa4.jpg" alt="">  
+                            <img mat-card-image *ngSwitchDefault src="../../../assets/mapas/mapa5.jpg" alt="">  
                         </div>
 
                         <mat-card-header>
@@ -82,7 +84,11 @@
                                 <b> <p> {{trayecto.precio | number: "0.2-2"}} € </p></b>
                             </div>
                           
-                           <button mat-fab > {{trayecto.calidad | number: "0.2-2"}} / 10 </button>
+                           <button mat-fab [ngClass] ="{
+                               'nivel4' : trayecto.calidad >= 0 && trayecto.calidad < 3.33,
+                               'nivel3' : trayecto.calidad >= 3.33 && trayecto.calidad < 6.66,
+                               'nivel1' : trayecto.calidad >= 6.66 && trayecto.calidad < 10
+                           }"> {{trayecto.calidad | number: "0.2-2"}}  </button>
                             
                          </mat-card-content>
                          <mat-card-actions class="actions">
