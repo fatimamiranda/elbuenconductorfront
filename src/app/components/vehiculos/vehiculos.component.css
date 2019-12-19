@@ -75,15 +75,16 @@
     }
     
     .tab{
+        display: none;
         margin-top: 80px;
-        width: 100%;
+        
     }
+    
 
-        .titulos{
+    .titulos{
         display: flex;
         flex-direction: column;
     }
-
 
 
 }
