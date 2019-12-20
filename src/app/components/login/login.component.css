@@ -5,44 +5,20 @@
     background-image: url("../../../assets/viaje.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1000px;
-    display: flex;
-  
-}
-
-.ventajas{
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    left: 20px;
-    margin-left: 150px;
-    margin-top: 60px;
-    font-size: 1.5em;
-    color: white;
-    padding: 10px;
-    
-}
-
-.ventajas div{
-  margin: 10px;
-}
-
-.welcome h3{
-  font-size: 4em;
-  color: white;
-  margin: 0;
-  margin-top: 50px;
+    height: 1000px;  
 }
 
 .login{
-  width: 200px;
-  margin-top: 100px;
-  margin-left: 250px;
+  width: 20%;
+  text-align: center;
+  margin: auto;
+  /* margin-top: 100px;
+  margin-left: 250px; */
 }
 
 .login h4{
-  color: rgb(146, 79, 79);
-  font-size: 2em;
+  color: white;
+  font-size: 3em;
   margin: 0px;
   font-weight: normal;
   
@@ -61,6 +37,15 @@
   margin-top: 10px;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  color:  #C5281C;
+  font-weight: bold;
+}
 
 @media (min-width: 320px) and (max-width: 660px) {
   .container{
@@ -74,51 +59,24 @@
     }
 
       
-  .ventajas{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    left: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    font-size: 0.8em;
-    color: white;
-    padding: 0px;
-    
-    }
-
-  .ventajas div{
-    padding-left: 20px;
-    font-size: 0.8em;
-  }
-
-  .ventajas div i{
-    font-size: 1em;
-  }
-    
-  .welcome h3{
-    font-size: 1em;
-    color: white;
-    margin: 0;
-    margin-top: 0px;
-    padding-top: 25px;
-    padding-left: 20px;
-  }
+  
 
   .login{
     width: 293px;
-    margin-top: 30px;
     padding-left: 49px;
     margin-left: 0px;
+    margin-top: 0px;
+    top: 150px;
+    position: relative;
+    
   }
 
   .login h4{
     color: white;
-    font-size: 0.8em;
+    font-size: 1.5em;
     margin: 0px;
     font-weight: normal;
     text-align: center;
-    
   }
 
   .input{
@@ -134,13 +92,13 @@
   
   .login p {
     color:white;
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
 
   .login button{
     margin-top: 20px;
     text-align: center;
-    margin-left: 90px;
+    margin-left: 0px;
   }
 
 

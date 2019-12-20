@@ -20,6 +20,10 @@ export class TrayectosService {
   //inyectamos el httpclient
   constructor(private http: HttpClient) { }
 
+  getTrayectoById(dni:String, id:number){
+    return this.http.get<Trayecto>(this.URL+dni+'/'+id);
+  }
+
   getTrayectos(dni:String, inicio:string, fin:string):Observable<Trayecto[]>{
    
     return this.http.get<Trayecto[]>(this.URL + dni + '/' + inicio + '/' + fin);

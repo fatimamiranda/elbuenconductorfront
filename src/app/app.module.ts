@@ -23,6 +23,8 @@ import { DatospersonalesComponent } from './components/datospersonales/datospers
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { TrayectosService } from './services/trayectos.service';
 import { VehiculoService } from './services/vehiculo.service';
+import { ModalModule } from './modal/modal.module';
+import { DetalletrayectoComponent } from './components/detalletrayecto/detalletrayecto.component';
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { VehiculoService } from './services/vehiculo.service';
     TrayectosComponent,
     PanelexpansionComponent,
     DatospersonalesComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    DetalletrayectoComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { VehiculoService } from './services/vehiculo.service';
     PrimengModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ModalModule 
   ],
   providers: [ProfileService, LoginService, TrayectosService, VehiculoService],
   bootstrap: [AppComponent]

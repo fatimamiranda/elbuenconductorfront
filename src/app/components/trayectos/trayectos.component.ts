@@ -24,6 +24,7 @@ export class TrayectosComponent implements OnInit {
   ngOnInit() {
     
     this.trayectos = [];
+    
 
   }
 
@@ -59,5 +60,10 @@ export class TrayectosComponent implements OnInit {
     
   }
 
+  verDetalleTrayecto(dni:string, id:number){
+
+    this.router.navigateByUrl('/detalletrayecto/'+ dni + '/'+ id);
+   
+  }
 
 }

@@ -60,7 +60,7 @@
 
             <div class="conjuntoTrayectos">
                 <div class="cardTrayecto">
-                    <mat-card class="example-card"  *ngFor="let trayecto of trayectos">
+                    <mat-card class="example-card"  *ngFor="let trayecto of trayectos" >
                     
                         <div [ngSwitch]="trayecto.mapImage">
                             <img mat-card-image *ngSwitchCase="0" src="../../../assets/mapas/mapa0.jpg" alt="">
@@ -73,8 +73,8 @@
 
                         <mat-card-header>
                             <div mat-card-avatar class="example-header-image"></div>
-                            <!-- <mat-card-title> </mat-card-title>
-                            <mat-card-subtitle></mat-card-subtitle> -->
+                            <mat-card-title> <button class="btnDetail" mat-raised-button (click)="verDetalleTrayecto(trayecto.calidad)"> DETALLE TRAYECTO </button></mat-card-title>
+                            <mat-card-subtitle></mat-card-subtitle> 
                           </mat-card-header>
                           <mat-card-content class="datos">
 

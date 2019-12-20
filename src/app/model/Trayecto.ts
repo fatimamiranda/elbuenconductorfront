@@ -17,7 +17,7 @@ export class Trayecto{
 
     constructor(id:number, dni:string, matricula:string, 
         kmRecorridos:number, nAcelerones:number, nFrenazos:number, 
-        rpmMedias:number, inicio:Date, fin:Date, precio:number, calidad:number){
+        rpmMedias:number, inicio:Date, fin:Date, precio:number, calidad:number, mapImage:number){
 
         this.id = id;
         this.dni = dni;
